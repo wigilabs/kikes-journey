@@ -42,26 +42,224 @@ function App() {
           </div>
           <div class="column">
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column green"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column green"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column green"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column green"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
           </div>
           <div class="column">
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column yellow"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column yellow"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column yellow"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column yellow"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
           </div>
           <div class="column">
             <div class="box">
-              hello
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column red"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column red"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column red"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
+            </div>
+            <div class="box">
+              <section>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column red"><span>70</span><p>Huevo 3</p></div>
+                </div>
+                <div class="row">
+                  <div class="column"><span>100</span><p>Huevo 1</p></div>
+                  <div class="column"><span>80</span><p>Huevo 2</p></div>
+                  <div class="column"></div>
+                </div>
+              </section>
+              <footer>
+                <p>Huevos restantes</p>
+                <span>100</span>
+              </footer>
             </div>
           </div>
         </div>
