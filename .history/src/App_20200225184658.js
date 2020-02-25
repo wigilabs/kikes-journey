@@ -567,7 +567,7 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw33}</span>
+                      <span>100</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
@@ -581,7 +581,7 @@ class App extends React.Component {
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw33}</span>
+                      <span>100</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
