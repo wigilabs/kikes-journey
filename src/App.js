@@ -10,30 +10,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
-      c1rw1: 100,
-      c1rw2: 80,
-      c1rw3: 60,
-      c1rw4: 50,
-      c2rw1: 90,
-      c2rw2: 70,
-      c2rw3: 50,
-      c2rw4: 40,
-      c3rw1: 70,
-      c3rw2: 60,
-      c3rw3: 45,
-      c3rw4: 39,
+
+      r1c1: 1000,
+      r3c1: 800,
+      r5c1: 600,
+      r7c1: 500,
+
+      r1c2: 90,
+      r3c2: 70,
+      r5c2: 50,
+      r7c2: 40,
+
+      r1c3: 250,
+      r3c3: 220,
+      r5c3: 200,
+      r7c3: 100,
+
+      r2c1: 250,
+      r4c1: 220,
+      r6c1: 200,
+      r8c1: 100,
+
+      r2c2: 120,
+      r4c2: 112,
+      r6c2: 110,
+      r8c2: 90,
     };
   }
 
-  Clock(a, b, c, d) {
-    let min = 0.25,
-        max = 4;
-    let time = Math.random() * (max - min + 1) + min;
-
-    min = 1;
-    max = 10;
-    let inc = Math.floor(Math.random() * (max - min + 1) + min);
+  Clock(a, b, c, d, time, inc) {
 
     let self = this;
 
@@ -49,9 +54,12 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    this.Clock("c1rw1", "c1rw2", "c1rw3", "c1rw4");
-    this.Clock("c2rw1", "c2rw2", "c2rw3", "c2rw4");
-    this.Clock("c3rw1", "c3rw2", "c3rw3", "c3rw4");
+    this.Clock("r1c1", "r3c1", "r5c1", "r7c1", 0.5, 5);
+    this.Clock("r1c2", "r3c2", "r5c2", "r7c2", 1.5, 10);
+    this.Clock("r1c3", "r3c3", "r5c3", "r7c3", 3.2, 10);
+
+    this.Clock("r2c1", "r4c1", "r6c1", "r8c1", 1.2, 10);
+    this.Clock("r2c2", "r4c2", "r6c2", "r8c2", 5, 20);
   }
   render() {
     //Return view
@@ -67,7 +75,7 @@ class App extends React.Component {
 
         <section class="content">
           <div class="table">
-            <div class="column"></div>
+            <div class="column" style={{maxWidth:'280px'}}></div>
             <div class="column">
               <p class="text color">Todos los depósitos</p>
             </div>
@@ -91,59 +99,25 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw1}</span>
+                      <span>{this.state.r1c1}</span>
                       <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
-                      <span>{this.state.c2rw1}</span>
+                      <span>{this.state.r1c2}</span>
                       <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw1}</span>
+                      <span>{this.state.r1c3}</span>
                       <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c2rw1}</span>
+                      <span>{this.state.r2c1}</span>
                       <p>AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw2}</span>
-                      <p>Orgánico x 15</p>
-                    </div>
-                    <div class="column"></div>
-                  </div>
-                </section>
-                <footer>
-                  <p>Huevos restantes</p>
-                  <span>100</span>
-                </footer>
-              </div>
-
-              <div class="box">
-                <section>
-                  <div class="row">
-                    <div class="column">
-                      <span>{this.state.c1rw2}</span>
-                      <p>plus AA x 12</p>
-                    </div>
-                    <div class="column green">
-                      <span>{this.state.c2rw2}</span>
-                      <p>AA C&C x 12</p>
-                    </div>
-                    <div class="column">
-                      <span>{this.state.c3rw2}</span>
-                      <p>AA C&C x 30</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                      <span>{this.state.c2rw1}</span>
-                      <p>AA x 12</p>
-                    </div>
-                    <div class="column">
-                      <span>{this.state.c2rw2 - 25}</span>
+                      <span>{this.state.r2c2}</span>
                       <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
@@ -157,27 +131,60 @@ class App extends React.Component {
               <div class="box">
                 <section>
                   <div class="row">
-                    <div class="column">
-                      <span>{this.state.c1rw3}</span>
+                    <div class="column yellow">
+                      <span>{this.state.r3c1}</span>
                       <p>plus AA x 12</p>
                     </div>
-                    <div class="column green">
-                      <span>{this.state.c2rw3 - 33}</span>
+                    <div class="column">
+                      <span>{this.state.r3c2}</span>
+                      <p>AA C&C x 12</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r3c3}</span>
+                      <p>AA C&C x 30</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="column">
+                      <span>{this.state.r4c1}</span>
+                      <p>AA x 12</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r4c2}</span>
+                      <p>Orgánico x 15</p>
+                    </div>
+                    <div class="column"></div>
+                  </div>
+                </section>
+                <footer>
+                  <p>Huevos restantes</p>
+                  <span>100</span>
+                </footer>
+              </div>
+              <div class="box">
+                <section>
+                  <div class="row">
+                    <div class="column">
+                      <span>{this.state.r5c1}</span>
+                      <p>plus AA x 12</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r5c2}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw3 - 33}</span>
+                      <span>{this.state.r5c3}</span>
                       <p>Huevo 3</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c2rw1 - 33}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r6c1}</span>
+                      <p>AA x 12</p>
                     </div>
-                    <div class="column">
-                      <span>{this.state.c2rw2 - 33}</span>
-                      <p>Huevo 2</p>
+                    <div class="column red">
+                      <span>{this.state.r6c2}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -191,26 +198,26 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw4}</span>
+                      <span>{this.state.r7c1}</span>
                       <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
-                      <span>{this.state.c2rw4 - 40}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r7c2}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw4 - 40}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r7c3}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c2rw1 - 40}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r8c1}</span>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw2 - 40}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r8c2}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -226,26 +233,26 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column yellow">
-                      <span>{this.state.c1rw1 - 13}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r1c1 - 300}</span>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw1 - 20}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r1c2 - 30}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw1 - 30}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r1c3 - 80}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw2}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r2c1 - 80}</span>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw2 - 20}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r2c2 - 50}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -258,27 +265,27 @@ class App extends React.Component {
               <div class="box">
                 <section>
                   <div class="row">
-                    <div class="column yellow">
-                      <span>{this.state.c1rw2 - 17}</span>
-                      <p>Huevo 1</p>
+                    <div class="column">
+                      <span>{this.state.r3c1 - 300}</span>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw2 - 11}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r3c2 - 30}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw2 - 11}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r3c3 - 80}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c3rw2 - 38}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r4c1 - 80}</span>
+                      <p>AA x 12</p>
                     </div>
-                    <div class="column">
-                      <span>{this.state.c3rw2 - 38}</span>
-                      <p>Huevo 2</p>
+                    <div class="column red">
+                      <span>{this.state.r4c2 - 50}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -291,27 +298,27 @@ class App extends React.Component {
               <div class="box">
                 <section>
                   <div class="row">
-                    <div class="column yellow">
-                      <span>{this.state.c1rw3 - 20}</span>
-                      <p>Huevo 1</p>
+                    <div class="column">
+                      <span>{this.state.r5c1 - 300}</span>
+                      <p>plus AA x 12</p>
+                    </div>
+                    <div class="column green">
+                      <span>{this.state.r5c2 - 30}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw3 - 53}</span>
-                      <p>Huevo 2</p>
-                    </div>
-                    <div class="column">
-                      <span>{this.state.c3rw3 - 28}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r5c3 - 80}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 28}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r6c1 - 80}</span>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4 - 33}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r6c2 - 50}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -325,26 +332,26 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column yellow">
-                      <span>{this.state.c1rw4 - 25}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r7c1 - 300}</span>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4 - 20}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r7c2 - 30}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw4 - 50}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r7c3 - 80}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 28}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r8c1 - 80}</span>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw3 - 28}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r8c2 - 50}</span>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -359,59 +366,26 @@ class App extends React.Component {
               <div class="box">
                 <section>
                   <div class="row">
-                    <div class="column">
-                      <span>{this.state.c1rw1 - 10}</span>
-                      <p>Huevo 1</p>
+                    <div class="column yellow">
+                      <span>{this.state.r1c1 - 400}</span>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r1c2 - 40}</span>
+                      <p>AA C&C x 12</p>
                     </div>
-                    <div class="column red">
-                      <span>{this.state.c3rw1}</span>
-                      <p>Huevo 3</p>
+                    <div class="column">
+                      <span>{this.state.r1c3 - 90}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw2}</span>
+                      <span>{this.state.r2c1 - 90}</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
-                      <p>Huevo 2</p>
-                    </div>
-                    <div class="column"></div>
-                  </div>
-                </section>
-                <footer>
-                  <p>Huevos restantes</p>
-                  <span>100</span>
-                </footer>
-              </div>
-              <div class="box">
-                <section>
-                  <div class="row">
-                    <div class="column">
-                      <span>{this.state.c1rw2 - 22}</span>
-                      <p>Huevo 1</p>
-                    </div>
-                    <div class="column">
-                      <span>{this.state.c2rw4 - 33}</span>
-                      <p>Huevo 2</p>
-                    </div>
-                    <div class="column red">
-                      <span>{this.state.c3rw2}</span>
-                      <p>Huevo 3</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                      <span>{this.state.c1rw4}</span>
-                      <p>Huevo 1</p>
-                    </div>
-                    <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.r2c2 - 60}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
@@ -426,25 +400,25 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 25}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r3c1 - 400}</span>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4 - 25}</span>
-                      <p>Huevo 2</p>
+                      <span>{this.state.r3c2 - 40}</span>
+                      <p>AA C&C x 12</p>
                     </div>
-                    <div class="column red">
-                      <span>{this.state.c3rw3 - 20}</span>
-                      <p>Huevo 3</p>
+                    <div class="column">
+                      <span>{this.state.r3c3 - 90}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 60}</span>
+                      <span>{this.state.r4c1 - 90}</span>
                       <p>Huevo 1</p>
                     </div>
-                    <div class="column">
-                      <span>{this.state.c2rw4 - 20}</span>
+                    <div class="column red">
+                      <span>{this.state.r4c2 - 60}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
@@ -459,25 +433,58 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw4 - 30}</span>
-                      <p>Huevo 1</p>
+                      <span>{this.state.r5c1 - 400}</span>
+                      <p>plus AA x 12</p>
+                    </div>
+                    <div class="column green">
+                      <span>{this.state.r5c2 - 40}</span>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
-                      <p>Huevo 2</p>
-                    </div>
-                    <div class="column red">
-                      <span>{this.state.c3rw4}</span>
-                      <p>Huevo 3</p>
+                      <span>{this.state.r5c3 - 90}</span>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 30}</span>
+                      <span>{this.state.r6c1 - 90}</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.r6c2 - 60}</span>
+                      <p>Huevo 2</p>
+                    </div>
+                    <div class="column"></div>
+                  </div>
+                </section>
+                <footer>
+                  <p>Huevos restantes</p>
+                  <span>100</span>
+                </footer>
+              </div>
+              <div class="box">
+                <section>
+                  <div class="row">
+                    <div class="column yellow">
+                      <span>{this.state.r7c1 - 400}</span>
+                      <p>plus AA x 12</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r7c2 - 40}</span>
+                      <p>AA C&C x 12</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r7c3 - 90}</span>
+                      <p>AA C&C x 30</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="column">
+                      <span>{this.state.r8c1 - 90}</span>
+                      <p>Huevo 1</p>
+                    </div>
+                    <div class="column">
+                      <span>{this.state.r8c2 - 60}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
