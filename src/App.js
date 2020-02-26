@@ -16,16 +16,11 @@ class App extends React.Component {
       c1rw2: 280,
       c1rw3: 220,
       c1rw4: 170,
-
-      c1rw11: "80",
-      c1rw22: "90",
-      c1rw33: "100",
-      c1rw44: "110",
+      c2rw1: 90,
+      c2rw2: 88,
+      c2rw3: 85,
+      c2rw4: 82,
       c1total: "",
-      c2rw1: "80",
-      c2rw2: "80",
-      c2rw3: "80",
-      c2rw4: "80",
       c2rw11: "80",
       c2rw22: "80",
       c2rw33: "80",
@@ -70,238 +65,9 @@ class App extends React.Component {
 
     // let clock1 = new Clock('c1rw1', 'c1rw2', 'c1rw3', 'c1rw4')
     this.Clock('c1rw1', 'c1rw2', 'c1rw3', 'c1rw4')
+    this.Clock('c2rw1', 'c2rw2', 'c2rw3', 'c2rw4')
   }
   render() {
-    //Todos los depositos
-    // col1 - 1
-    // console.log('this.state.prodTime: ', this.state.prodTime)
-    // setInterval(() => {
-    //   console.log(':)')
-    //   // this.setState({
-    //   //   c1rw1: parseInt(this.state.c1rw1) + 1
-    //   // });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw2: parseInt(this.state.c1rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw3: parseInt(this.state.c1rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw4: parseInt(this.state.c1rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    //end col1 - 1
-
-
-
-    // // col1 - 2
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw11: parseInt(this.state.c1rw11) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw22: parseInt(this.state.c1rw22) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw33: parseInt(this.state.c1rw33) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw44: parseInt(this.state.c1rw44) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col1 - 2
-    // // col2 - 1
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw1: parseInt(this.state.c2rw1) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw2: parseInt(this.state.c2rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw3: parseInt(this.state.c2rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw4: parseInt(this.state.c2rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col2 - 1
-    // // col2 - 2
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw11: parseInt(this.state.c2rw11) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw22: parseInt(this.state.c2rw22) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw33: parseInt(this.state.c2rw33) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw44: parseInt(this.state.c2rw44) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col2 - 2
-    // //col3
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw1: parseInt(this.state.c3rw1) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw2: parseInt(this.state.c3rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw3: parseInt(this.state.c3rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw4: parseInt(this.state.c3rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col3
-    // //Bogota
-    // // col1 - 1
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw1: parseInt(this.state.c1rw1) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw2: parseInt(this.state.c1rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw3: parseInt(this.state.c1rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw4: parseInt(this.state.c1rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col1 - 1
-    // // col1 - 2
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw11: parseInt(this.state.c1rw11) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw22: parseInt(this.state.c1rw22) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw33: parseInt(this.state.c1rw33) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c1rw44: parseInt(this.state.c1rw44) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col1 - 2
-    // // col2 - 1
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw1: parseInt(this.state.c2rw1) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw2: parseInt(this.state.c2rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw3: parseInt(this.state.c2rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw4: parseInt(this.state.c2rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col2 - 1
-    // // col2 - 2
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw11: parseInt(this.state.c2rw11) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw22: parseInt(this.state.c2rw22) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw33: parseInt(this.state.c2rw33) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c2rw44: parseInt(this.state.c2rw44) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col2 - 2
-    // //col3
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw1: parseInt(this.state.c3rw1) + 1
-    //   });
-    // }, parseInt(this.state.prodTime));
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw2: parseInt(this.state.c3rw2) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 2);
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw3: parseInt(this.state.c3rw3) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 4);
-    // setInterval(() => {
-    //   this.setState({
-    //     c3rw4: parseInt(this.state.c3rw4) + 1
-    //   });
-    // }, parseInt(this.state.prodTime) * 8);
-    // //end col3
-
-
-
     //Return view
     return (
       <div class="App">
@@ -506,15 +272,15 @@ class App extends React.Component {
                 <section>
                   <div class="row">
                     <div class="column yellow">
-                      <span>{this.state.c1rw2 - 18}</span>
+                      <span>>{this.state.c1rw1}</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw2 - 38}</span>
+                      <span>xxxx</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw2 - 48}</span>
+                      <span>xx</span>
                       <p>Huevo 3</p>
                     </div>
                   </div>
