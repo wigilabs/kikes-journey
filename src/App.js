@@ -32,12 +32,13 @@ class App extends React.Component {
   }
 
   Clock(a, b, c, d) {
-    let min = 1,
-      max = 5;
-    let time = Math.floor(Math.random() * (max - min + 1) + min);
+    let min = 0.25,
+        max = 5;
+    let time = Math.random() * (max - min + 1) + min;
+    console.log('time: ', time)
 
-    min = 50;
-    max = 100;
+    min = 20;
+    max = 50;
     let inc = Math.floor(Math.random() * (max - min + 1) + min);
 
     let self = this;
@@ -87,7 +88,7 @@ class App extends React.Component {
           </div>
 
           <div class="table">
-            <div class="column">
+            <div class="column" style={{maxWidth:'280px'}}>
               <img src={image1} class="image" />
               <img src={image2} class="image" />
               <img src={image3} class="image" />
@@ -99,25 +100,25 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c1rw1}</span>
-                      <p>Huevo 1</p>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
                       <span>{this.state.c2rw1}</span>
-                      <p>Huevo 2</p>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.c3rw1}</span>
-                      <p>Huevo 3</p>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c2rw1}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.c2rw2}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -133,7 +134,7 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c1rw2}</span>
-                      <p>Huevo 1</p>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
                       <span>{this.state.c2rw2}</span>
@@ -166,7 +167,7 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c1rw3}</span>
-                      <p>Huevo 1</p>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
                       <span>{this.state.c2rw3 - 33}</span>
@@ -199,7 +200,7 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c1rw4}</span>
-                      <p>Huevo 1</p>
+                      <p>plus AA x 12</p>
                     </div>
                     <div class="column green">
                       <span>{this.state.c2rw4 - 40}</span>
