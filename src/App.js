@@ -382,11 +382,11 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.r2c1 - 90}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.r2c2 - 60}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -415,11 +415,11 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.r4c1 - 90}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column red">
                       <span>{this.state.r4c2 - 60}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -448,11 +448,11 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.r6c1 - 90}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.r6c2 - 60}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
@@ -481,11 +481,11 @@ class App extends React.Component {
                   <div class="row">
                     <div class="column">
                       <span>{this.state.r8c1 - 90}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.r8c2 - 60}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
