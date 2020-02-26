@@ -23,22 +23,16 @@ class App extends React.Component {
       c3rw2: 60,
       c3rw3: 45,
       c3rw4: 39,
-      c1total: 100,
-      min: "20",
-      max: "1000",
-      // prodTime: "500000"
-      prodTime: "5000"
     };
   }
 
   Clock(a, b, c, d) {
     let min = 0.25,
-        max = 5;
+        max = 4;
     let time = Math.random() * (max - min + 1) + min;
-    console.log('time: ', time)
 
-    min = 20;
-    max = 50;
+    min = 1;
+    max = 10;
     let inc = Math.floor(Math.random() * (max - min + 1) + min);
 
     let self = this;
@@ -54,9 +48,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount ...");
 
-    // let clock1 = new Clock('c1rw1', 'c1rw2', 'c1rw3', 'c1rw4')
     this.Clock("c1rw1", "c1rw2", "c1rw3", "c1rw4");
     this.Clock("c2rw1", "c2rw2", "c2rw3", "c2rw4");
     this.Clock("c3rw1", "c3rw2", "c3rw3", "c3rw4");
@@ -138,21 +130,21 @@ class App extends React.Component {
                     </div>
                     <div class="column green">
                       <span>{this.state.c2rw2}</span>
-                      <p>Huevo 2</p>
+                      <p>AA C&C x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.c3rw2}</span>
-                      <p>Huevo 3</p>
+                      <p>AA C&C x 30</p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="column">
                       <span>{this.state.c2rw1}</span>
-                      <p>Huevo 1</p>
+                      <p>AA x 12</p>
                     </div>
                     <div class="column">
                       <span>{this.state.c2rw2 - 25}</span>
-                      <p>Huevo 2</p>
+                      <p>Orgánico x 15</p>
                     </div>
                     <div class="column"></div>
                   </div>
