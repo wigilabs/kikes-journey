@@ -11,10 +11,12 @@ class App extends React.Component {
     super(props);
     this.state = {
       value: "",
-      c1rw1: "101",
-      c1rw2: "102",
-      c1rw3: "103",
-      c1rw4: "104",
+
+      c1rw1: 300,
+      c1rw2: 280,
+      c1rw3: 220,
+      c1rw4: 170,
+
       c1rw11: "80",
       c1rw22: "90",
       c1rw33: "100",
@@ -36,232 +38,270 @@ class App extends React.Component {
       c2total: "",
       min: "20",
       max: "1000",
-      prodTime: "500000"
+      // prodTime: "500000"
+      prodTime: "5000"
     };
+  }
+
+  Clock(a, b, c, d) {
+
+    let min = 1, max = 5;
+    let time = Math.floor(Math.random() * (max - min + 1) + min);
+
+    min = 50; max = 100;
+    let inc = Math.floor(Math.random() * (max - min + 1) + min);
+
+    let self = this
+
+    setInterval(function () {
+
+      self.setState({
+        [a]: self.state[a] + inc,
+        [b]: Math.floor(self.state[b] + inc * 0.7),
+        [c]: Math.floor(self.state[c] + inc * 0.5),
+        [d]: Math.floor(self.state[d] + inc * 0.3),
+      });
+
+    }, time * 1000)
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount ...')
+
+    // let clock1 = new Clock('c1rw1', 'c1rw2', 'c1rw3', 'c1rw4')
+    this.Clock('c1rw1', 'c1rw2', 'c1rw3', 'c1rw4')
   }
   render() {
     //Todos los depositos
     // col1 - 1
-    setInterval(() => {
-      this.setState({
-        c1rw1: parseInt(this.state.c1rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c1rw2: parseInt(this.state.c1rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c1rw3: parseInt(this.state.c1rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c1rw4: parseInt(this.state.c1rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
+    // console.log('this.state.prodTime: ', this.state.prodTime)
+    // setInterval(() => {
+    //   console.log(':)')
+    //   // this.setState({
+    //   //   c1rw1: parseInt(this.state.c1rw1) + 1
+    //   // });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw2: parseInt(this.state.c1rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw3: parseInt(this.state.c1rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw4: parseInt(this.state.c1rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
     //end col1 - 1
-    // col1 - 2
-    setInterval(() => {
-      this.setState({
-        c1rw11: parseInt(this.state.c1rw11) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c1rw22: parseInt(this.state.c1rw22) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c1rw33: parseInt(this.state.c1rw33) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c1rw44: parseInt(this.state.c1rw44) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col1 - 2
-    // col2 - 1
-    setInterval(() => {
-      this.setState({
-        c2rw1: parseInt(this.state.c2rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c2rw2: parseInt(this.state.c2rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c2rw3: parseInt(this.state.c2rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c2rw4: parseInt(this.state.c2rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col2 - 1
-    // col2 - 2
-    setInterval(() => {
-      this.setState({
-        c2rw11: parseInt(this.state.c2rw11) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c2rw22: parseInt(this.state.c2rw22) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c2rw33: parseInt(this.state.c2rw33) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c2rw44: parseInt(this.state.c2rw44) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col2 - 2
-    //col3
-    setInterval(() => {
-      this.setState({
-        c3rw1: parseInt(this.state.c3rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c3rw2: parseInt(this.state.c3rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c3rw3: parseInt(this.state.c3rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c3rw4: parseInt(this.state.c3rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col3
-    //Bogota
-    // col1 - 1
-    setInterval(() => {
-      this.setState({
-        c1rw1: parseInt(this.state.c1rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c1rw2: parseInt(this.state.c1rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c1rw3: parseInt(this.state.c1rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c1rw4: parseInt(this.state.c1rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col1 - 1
-    // col1 - 2
-    setInterval(() => {
-      this.setState({
-        c1rw11: parseInt(this.state.c1rw11) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c1rw22: parseInt(this.state.c1rw22) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c1rw33: parseInt(this.state.c1rw33) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c1rw44: parseInt(this.state.c1rw44) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col1 - 2
-    // col2 - 1
-    setInterval(() => {
-      this.setState({
-        c2rw1: parseInt(this.state.c2rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c2rw2: parseInt(this.state.c2rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c2rw3: parseInt(this.state.c2rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c2rw4: parseInt(this.state.c2rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col2 - 1
-    // col2 - 2
-    setInterval(() => {
-      this.setState({
-        c2rw11: parseInt(this.state.c2rw11) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c2rw22: parseInt(this.state.c2rw22) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c2rw33: parseInt(this.state.c2rw33) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c2rw44: parseInt(this.state.c2rw44) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col2 - 2
-    //col3
-    setInterval(() => {
-      this.setState({
-        c3rw1: parseInt(this.state.c3rw1) + 1
-      });
-    }, parseInt(this.prodTime));
-    setInterval(() => {
-      this.setState({
-        c3rw2: parseInt(this.state.c3rw2) + 1
-      });
-    }, parseInt(this.prodTime) * 2);
-    setInterval(() => {
-      this.setState({
-        c3rw3: parseInt(this.state.c3rw3) + 1
-      });
-    }, parseInt(this.prodTime) * 4);
-    setInterval(() => {
-      this.setState({
-        c3rw4: parseInt(this.state.c3rw4) + 1
-      });
-    }, parseInt(this.prodTime) * 8);
-    //end col3
+
+
+
+    // // col1 - 2
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw11: parseInt(this.state.c1rw11) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw22: parseInt(this.state.c1rw22) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw33: parseInt(this.state.c1rw33) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw44: parseInt(this.state.c1rw44) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col1 - 2
+    // // col2 - 1
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw1: parseInt(this.state.c2rw1) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw2: parseInt(this.state.c2rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw3: parseInt(this.state.c2rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw4: parseInt(this.state.c2rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col2 - 1
+    // // col2 - 2
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw11: parseInt(this.state.c2rw11) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw22: parseInt(this.state.c2rw22) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw33: parseInt(this.state.c2rw33) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw44: parseInt(this.state.c2rw44) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col2 - 2
+    // //col3
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw1: parseInt(this.state.c3rw1) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw2: parseInt(this.state.c3rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw3: parseInt(this.state.c3rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw4: parseInt(this.state.c3rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col3
+    // //Bogota
+    // // col1 - 1
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw1: parseInt(this.state.c1rw1) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw2: parseInt(this.state.c1rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw3: parseInt(this.state.c1rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw4: parseInt(this.state.c1rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col1 - 1
+    // // col1 - 2
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw11: parseInt(this.state.c1rw11) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw22: parseInt(this.state.c1rw22) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw33: parseInt(this.state.c1rw33) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c1rw44: parseInt(this.state.c1rw44) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col1 - 2
+    // // col2 - 1
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw1: parseInt(this.state.c2rw1) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw2: parseInt(this.state.c2rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw3: parseInt(this.state.c2rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw4: parseInt(this.state.c2rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col2 - 1
+    // // col2 - 2
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw11: parseInt(this.state.c2rw11) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw22: parseInt(this.state.c2rw22) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw33: parseInt(this.state.c2rw33) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c2rw44: parseInt(this.state.c2rw44) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col2 - 2
+    // //col3
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw1: parseInt(this.state.c3rw1) + 1
+    //   });
+    // }, parseInt(this.state.prodTime));
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw2: parseInt(this.state.c3rw2) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 2);
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw3: parseInt(this.state.c3rw3) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 4);
+    // setInterval(() => {
+    //   this.setState({
+    //     c3rw4: parseInt(this.state.c3rw4) + 1
+    //   });
+    // }, parseInt(this.state.prodTime) * 8);
+    // //end col3
+
+
+
     //Return view
     return (
       <div class="App">
