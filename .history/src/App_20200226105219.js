@@ -307,7 +307,7 @@ class App extends React.Component {
                       <p>Huevo 2</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c3rw3 - 28}</span>
+                      <span>{this.state.c3rw3 - 48}</span>
                       <p>Huevo 3</p>
                     </div>
                   </div>
@@ -371,7 +371,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column red">
@@ -385,7 +385,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
@@ -404,7 +404,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column red">
@@ -418,7 +418,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
@@ -437,7 +437,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column red">
@@ -447,11 +447,11 @@ class App extends React.Component {
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 60}</span>
+                      <span>{this.state.c1rw33}</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4 - 20}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
@@ -470,7 +470,7 @@ class App extends React.Component {
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column red">
@@ -480,11 +480,11 @@ class App extends React.Component {
                   </div>
                   <div class="row">
                     <div class="column">
-                      <span>{this.state.c1rw3 - 30}</span>
+                      <span>{this.state.c1rw33}</span>
                       <p>Huevo 1</p>
                     </div>
                     <div class="column">
-                      <span>{this.state.c2rw4}</span>
+                      <span>{this.state.c2rw44}</span>
                       <p>Huevo 2</p>
                     </div>
                     <div class="column"></div>
