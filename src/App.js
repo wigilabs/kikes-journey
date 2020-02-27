@@ -1,11 +1,12 @@
 import React from "react";
-import logo     from "./img/logo.png";
+import logo from "./img/logo.png";
 import newrelic from "./img/newrelic.png";
 import wigilabs from "./img/wigilabs.png";
 import image1 from "./img/image1.png";
 import image2 from "./img/image2.png";
 import image3 from "./img/image3.png";
 import image4 from "./img/image4.png";
+import n1 from "./img/n1.png";
 import "./App.css";
 
 class App extends React.Component {
@@ -137,6 +138,7 @@ class App extends React.Component {
                   <p>Huevos restantes</p>
                   <span>100</span>
                 </footer>
+                <img src={n1} class="n1" />
               </div>
               <div class="box">
                 <section>

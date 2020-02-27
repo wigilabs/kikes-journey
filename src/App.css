@@ -105,6 +105,13 @@ body {
   display: flex;
   flex-direction: column;
   color: #6C6C6C;
+  position: relative;
+}
+
+.box .n1 {
+  position: absolute;
+  width: 46px;
+  left: -20px;
 }
 
 .box section {
