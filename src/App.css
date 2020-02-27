@@ -67,6 +67,7 @@ body {
 .content {
   max-width: 1300px;
   margin: auto;
+  padding-bottom: 40px;
 }
 
 /* table */
