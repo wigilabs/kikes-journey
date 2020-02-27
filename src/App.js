@@ -1,9 +1,11 @@
 import React from "react";
-import logo from "./logo.png";
-import image1 from "./image1.png";
-import image2 from "./image2.png";
-import image3 from "./image3.png";
-import image4 from "./image4.png";
+import logo     from "./img/logo.png";
+import newrelic from "./img/newrelic.png";
+import wigilabs from "./img/wigilabs.png";
+import image1 from "./img/image1.png";
+import image2 from "./img/image2.png";
+import image3 from "./img/image3.png";
+import image4 from "./img/image4.png";
 import "./App.css";
 
 class App extends React.Component {
@@ -71,7 +73,15 @@ class App extends React.Component {
             <h1>El camino del huevo</h1>
           </div>
         </header>
-        <section class="gray"></section>
+
+        <section class="gray">
+          <div class="gray-inner">
+            <p>Instrumentado por</p>&nbsp;&nbsp;
+            <img src={newrelic} class="newrelic"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p>Producido por</p>&nbsp;&nbsp;
+            <img src={wigilabs} class="wigilabs" />
+          </div>
+        </section>
 
         <section class="content">
           <div class="table">
