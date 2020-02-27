@@ -46,12 +46,24 @@ class App extends React.Component {
     let self = this;
 
     setInterval(function() {
-      self.setState({
-        [a]: self.state[a] + inc,
-        [b]: Math.floor(self.state[b] + inc * 0.7),
-        [c]: Math.floor(self.state[c] + inc * 0.5),
-        [d]: Math.floor(self.state[d] + inc * 0.3)
-      });
+
+      var min = 0.1,
+          max = 2.9;
+      var rand = Math.floor(Math.random() * (max - min) + min);
+      console.log('rand: ', rand)
+
+      if(rand == 2) {
+        self.setState({
+          [a]: self.state[a] + inc,
+          [b]: Math.floor(self.state[b] + inc * 0.7),
+          [c]: Math.floor(self.state[c] + inc * 0.5),
+          [d]: Math.floor(self.state[d] + inc * 0.3)
+        });
+      } else {
+        self.setState({
+          [a]: self.state[a] + inc
+        });
+      }
     }, time * 1000);
   }
 
